@@ -1,1 +1,76 @@
-site_name: My Docs
+site_name: SIPx 开发说明
+site_author: 广州市和声信息技术有限公司
+copyright: 广州市和声信息技术有限公司 © 2022
+
+docs_dir: src
+
+# 目录
+nav:
+  - index.md
+
+plugins:
+  - search
+  - localsearch
+
+theme:
+  name: material
+  custom_dir: theme
+  language: zh
+  font: false
+
+  features:
+    - navigation.sections
+    - navigation.expand
+    - toc.integrate
+    # - navigation.tabs
+    - navigation.top
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: 切换到暗色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: light blue
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到亮色模式
+
+markdown_extensions:
+  - pymdownx.extra
+  ### pymdownx.extra replaces markdown.extensions.extra, Here is the full list of included extensions:
+  ## pymdownx.betterem
+  ## pymdownx.superfences
+  ## markdown.extensions.footnotes
+  ## markdown.extensions.attr_list
+  ## markdown.extensions.def_list
+  ## markdown.extensions.tables
+  ## markdown.extensions.abbr
+  ## markdown.extensions.md_in_html
+  - pymdownx.highlight
+  - pymdownx.details
+  - pymdownx.saneheaders
+  - pymdownx.smartsymbols
+  - pymdownx.critic:
+      mode: view
+  - pymdownx.snippets
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.smartsymbols
+  # Officially Supported Extensions
+  - admonition
+  - meta
+  # - sane_lists:
+  # - smarty:
+  - toc:
+      permalink: true
+      slugify: !!python/name:pymdownx.slugs.uslugify
+  # 3rd extensions
+  - plantuml_markdown:
+      # 如在 Windows 中无法使用 plantuml，可启用这个配置
+      server: http://www.plantuml.com/plantuml
+      format: svg
