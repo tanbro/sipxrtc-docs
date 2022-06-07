@@ -11,6 +11,13 @@ nav:
 plugins:
   - search
   - localsearch
+  ## with-pdf is Not available on Windows
+  - with-pdf:
+      enabled_if_env: ENABLE_PDF_EXPORT
+      toc_title: 目录
+      toc_level: 3
+      cover_title: SIPx
+      cover_subtitle: 开发说明
 
 theme:
   name: material
@@ -71,6 +78,6 @@ markdown_extensions:
       slugify: !!python/name:pymdownx.slugs.uslugify
   # 3rd extensions
   - plantuml_markdown:
-      # 如在 Windows 中无法使用 plantuml，可启用这个配置
-      server: http://www.plantuml.com/plantuml
-      format: svg
+      ## 如在 Windows 中无法使用 plantuml，可启用这个配置
+      # server: http://www.plantuml.com/plantuml
+      # format: svg
