@@ -1,6 +1,7 @@
 site_name: SIPx 开发说明
 site_author: 广州市和声信息技术有限公司
-copyright: 广州市和声信息技术有限公司 © 2022
+copyright: >
+  <a href="http://www.hesong.net/">广州市和声信息技术有限公司</a> © 2022
 
 docs_dir: src
 
@@ -8,29 +9,32 @@ docs_dir: src
 nav:
   - index.md
 
-plugins:
-  - search
-  - localsearch
-  ## with-pdf is Not available on Windows
-  - with-pdf:
-      enabled_if_env: ENABLE_PDF_EXPORT
-      toc_title: 目录
-      toc_level: 3
-      cover_title: SIPx
-      cover_subtitle: 开发说明
+extra:
+  generator: false
+  social:
+    - name: 访问 SIPx 官网
+      link: http://sipx.cn/
+      icon: material/web
 
 theme:
   name: material
-  custom_dir: theme
   language: zh
   font: false
+  favicon: assets/images/favicon.ico
+  icon:
+    logo: material/webrtc
+
+  # custom_dir: overrides
 
   features:
+    - header.autohide
+    - navigation.instant
     - navigation.sections
-    - navigation.expand
-    - toc.integrate
+    # - navigation.expand
     # - navigation.tabs
     - navigation.top
+    - toc.integrate
+    - content.tooltips
 
   palette:
     - media: "(prefers-color-scheme: light)"
@@ -40,8 +44,6 @@ theme:
         name: 切换到暗色模式
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: light blue
-      accent: light blue
       toggle:
         icon: material/weather-sunny
         name: 切换到亮色模式
@@ -63,21 +65,45 @@ markdown_extensions:
   - pymdownx.smartsymbols
   - pymdownx.critic:
       mode: view
-  - pymdownx.snippets
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
   - pymdownx.caret
   - pymdownx.mark
   - pymdownx.tilde
-  - pymdownx.smartsymbols
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
   # Officially Supported Extensions
+  - abbr
   - admonition
   - meta
-  # - sane_lists:
-  # - smarty:
+  - md_in_html
+  - sane_lists:
+  - smarty:
   - toc:
       permalink: true
-      slugify: !!python/name:pymdownx.slugs.uslugify
+      slugify:
+        !!python/object/apply:pymdownx.slugs.slugify { kwds: { case: lower } }
   # 3rd extensions
   - plantuml_markdown:
       ## 如在 Windows 中无法使用 plantuml，可启用这个配置
       # server: http://www.plantuml.com/plantuml
       # format: svg
+
+extra_javascript:
+  - assets/scripts/tabbedSync.js
+
+plugins:
+  - search
+  ## with-pdf is Not available on Windows
+  - with-pdf:
+      enabled_if_env: ENABLE_PDF_EXPORT
+      toc_title: 目录
+      toc_level: 3
+      cover_title: SIPx
+      cover_subtitle: 开发说明

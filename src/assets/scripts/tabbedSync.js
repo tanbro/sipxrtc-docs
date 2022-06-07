@@ -1,0 +1,27 @@
+(() => {
+  const tabs = document.querySelectorAll(".tabbed-set > input");
+  for (const tab of tabs) {
+    tab.addEventListener("click", () => {
+      const current = document.querySelector(`label[for=${tab.id}]`);
+      const pos = current.getBoundingClientRect().top;
+      const labelContent = current.innerHTML;
+      const labels = document.querySelectorAll(
+        ".tabbed-set > label, .tabbed-alternate > .tabbed-labels > label"
+      );
+      for (const label of labels) {
+        if (label.innerHTML === labelContent) {
+          const input = document.querySelector(
+            `input[id=${label.getAttribute("for")}]`
+          );
+          if (input.dispatchEvent(new Event("change"))) {
+            input.checked = true;
+          }
+        }
+      }
+
+      // Preserve scroll position
+      const delta = current.getBoundingClientRect().top - pos;
+      window.scrollBy(0, delta);
+    });
+  }
+})();
