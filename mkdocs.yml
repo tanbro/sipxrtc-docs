@@ -103,9 +103,9 @@ extra_javascript:
 plugins:
   - search
   ## with-pdf is Not available on Windows
-  - with-pdf:
-      enabled_if_env: ENABLE_PDF_EXPORT
-      toc_title: 目录
-      toc_level: 3
-      cover_title: SIPx
-      cover_subtitle: 开发说明
+  # - with-pdf:
+  #     enabled_if_env: ENABLE_PDF_EXPORT
+  #     toc_title: 目录
+  #     toc_level: 3
+  #     cover_title: SIPx
+  #     cover_subtitle: 开发说明
