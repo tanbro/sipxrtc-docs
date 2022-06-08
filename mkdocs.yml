@@ -14,7 +14,7 @@ extra:
   social:
     - name: 访问 SIPx 官网
       link: http://sipx.cn/
-      icon: material/web
+      icon: material/link
 
 theme:
   name: material

@@ -19,3 +19,15 @@ https://squidfunk.github.io/mkdocs-material/reference/abbreviations/#adding-abbr
 [WebRTC]: https://webrtc.org/
 
 ---
+
+*[RTC]: Real-time communication (RTC) is a category of software protocols and communication hardware media that gives real-time guarantees, which is necessary to support real-time guarantees of real-time computing.
+
+*[POTS]: Plain old telephone service (POTS), or plain ordinary telephone system, is a retronym for voice-grade telephone service employing analog signal transmission over copper loops.
+
+*[VoIP]: Voice over Internet Protocol (VoIP), also called IP telephony, is a method and group of technologies for the delivery of voice communications and multimedia sessions over Internet Protocol (IP) networks, such as the Internet. The terms Internet telephony, broadband telephony, and broadband phone service specifically refer to the provisioning of communications services (voice, fax, SMS, voice-messaging) over the Internet, rather than via the public switched telephone network (PSTN), also known as plain old telephone service (POTS).
+
+---
+
+*[TRTC]: 实时音视频（Tencent RTC）基于腾讯21年来在网络与音视频技术上的深度积累，以多人音视频通话和低延时互动直播两大场景化方案，通过腾讯云服务向开发者开放，致力于帮助开发者快速搭建低成本、低延时、高品质的音视频互动解决方案。
+
+---
