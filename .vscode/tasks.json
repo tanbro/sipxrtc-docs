@@ -5,12 +5,8 @@
     "tasks": [
         {
             "label": "build",
-            "command": "${command:python.interpreterPath}",
-            "args": [
-                "-m",
-                "mkdocs",
-                "build"
-            ],
+            "type": "shell",
+            "command": "${command:python.interpreterPath} -m mkdocs build",
             "problemMatcher": [],
             "group": {
                 "kind": "build",
@@ -19,12 +15,8 @@
         },
         {
             "label": "build pdf",
-            "command": "${command:python.interpreterPath}",
-            "args": [
-                "-m",
-                "mkdocs",
-                "build"
-            ],
+            "type": "shell",
+            "command": "${command:python.interpreterPath} -m mkdocs build",
             "options": {
                 "env": {
                     "ENABLE_PDF_EXPORT": "1"
@@ -35,14 +27,8 @@
         },
         {
             "label": "serve",
-            "command": "${command:python.interpreterPath}",
-            "args": [
-                "-m",
-                "mkdocs",
-                "serve",
-                "-a",
-                "localhost:8080"
-            ],
+            "type": "shell",
+            "command": "${command:python.interpreterPath} -m mkdocs serve -a localhost:8080",
             "problemMatcher": []
         }
     ]
