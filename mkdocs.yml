@@ -47,6 +47,8 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: 切换到亮色模式
+      primary: teal
+      accent: teal
 
 markdown_extensions:
   - pymdownx.extra

@@ -17,8 +17,9 @@
 ## 支持的 RTC 系统
 
 <!-- markdownlint-disable line-length no-empty-links -->
-|                                                实时音视频系统                                                |                 支持情况                  |
-| ------------------------------------------------------------------------------------------------------------ | ----------------------------------------- |
-| [阿里云音视频通信 RTC](https://www.aliyun.com/product/rtc?spm=5176.19720258.J_3207526240.155.e9392c4aYCHBha) | :fontawesome-solid-person-digging: 开发中 |
-| [腾讯云实时音视频 TRTC](https://cloud.tencent.com/product/trtc)                                              | :material-check: 支持                     |
+|                                                实时音视频系统                                                |           支持情况           |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- |
+| [阿里云音视频通信 RTC](https://www.aliyun.com/product/rtc?spm=5176.19720258.J_3207526240.155.e9392c4aYCHBha) | :construction: 开发中        |
+| [腾讯云实时音视频 TRTC](https://cloud.tencent.com/product/trtc)                                              | :ballot_box_with_check: 支持 |
+| [声网](https://www.agora.io/)                                                                                | :calendar: 规划中            |
 <!-- markdownlint-enable -->
