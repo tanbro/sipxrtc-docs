@@ -14,6 +14,12 @@ https://squidfunk.github.io/mkdocs-material/reference/abbreviations/#adding-abbr
 
 ---
 
+*[SRTP]: SRTP provides a framework for encryption and message authentication of RTP and RTCP streams
+
+[SRTP]: https://datatracker.ietf.org/doc/html/rfc3711
+
+---
+
 *[WebRTC]: Real-time communication for the web
 
 [WebRTC]: https://webrtc.org/
@@ -31,3 +37,7 @@ https://squidfunk.github.io/mkdocs-material/reference/abbreviations/#adding-abbr
 *[TRTC]: 实时音视频（Tencent RTC）基于腾讯21年来在网络与音视频技术上的深度积累，以多人音视频通话和低延时互动直播两大场景化方案，通过腾讯云服务向开发者开放，致力于帮助开发者快速搭建低成本、低延时、高品质的音视频互动解决方案。
 
 ---
+
+*[OpenAPI]: The OpenAPI Specification (OAS) defines a standard, programming language-agnostic interface description for HTTP APIs, which allows both humans and computers to discover and understand the capabilities of a service without requiring access to source code, additional documentation, or inspection of network traffic.
+
+[OpenAPI]: https://openapis.org/
