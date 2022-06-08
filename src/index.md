@@ -4,15 +4,25 @@
 
 它以多人音视频通话+电话互通，和低延时移动端通话+电话互通两大场景化方案，通过云服务向开发者开放， 致力于帮助开发者快速搭建低成本、低延时、高品质的移动音视频与 VoIP 话路互通解决方案。
 
-<!-- markdownlint-disable no-space-in-links no-alt-text -->
-[访问 **SIPx** ![](http://sipx.cn/favicon.ico) 网站了解更多 ... ](http://sipx.cn/){ .md-button }
-<!-- markdownlint-enable -->
+--8<-- "includes/official_site.md"
+
+---
 
 ## 架构
 
 ![media path](images/media_path.png)
 
-[SIPx][] 提供了
+!!! summary
+    [SIPx][] 提供了将电话呼叫加入到 RTC 系统的能力。使用者可视之为 RTC 系统的 ==电话代理==。
+
+    也就是说，[SIPx][] 将电话呼叫的语音作为 RTC 系统的一个有音频无视频的客户端，想其它普通的客户端一样，加入到一对一对话，或者多人房间。
+    而其它客户端，无论小程序或App都与 [SIPx][] 无关，它们只需照常进行音视频对话或会议，就可与电话呼叫的音频打通连接。
+
+!!! important
+    [SIPx][] **不提供**电话线路。用户可以选择：
+
+    - 使用 SIM 卡无线语音网关，将它注册到 [SIPx][]
+    - 使用第三方 VoIP 服务商提供的线路，将它与 [SIPx][] 对接
 
 ## 支持的 RTC 系统
 
@@ -23,3 +33,7 @@
 | [腾讯云实时音视频 TRTC](https://cloud.tencent.com/product/trtc)                                              | :ballot_box_with_check: 支持 |
 | [声网](https://www.agora.io/)                                                                                | :calendar: 规划中            |
 <!-- markdownlint-enable -->
+
+## 技术特点
+
+## 安全与隐私

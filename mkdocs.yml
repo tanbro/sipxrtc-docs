@@ -11,15 +11,11 @@ nav:
 
 extra:
   generator: false
-  social:
-    - name: 访问 SIPx 官网
-      link: http://sipx.cn/
-      icon: material/link
 
 theme:
   name: material
   language: zh
-  font: false
+  # font: false
   favicon: images/favicon.png
   icon:
     logo: material/webrtc
@@ -72,6 +68,7 @@ markdown_extensions:
       mode: view
   - pymdownx.snippets:
       auto_append:
+        - includes/official_site.md
         - includes/abbreviations.md
   - pymdownx.caret
   - pymdownx.mark
