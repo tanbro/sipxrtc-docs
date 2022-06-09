@@ -47,6 +47,16 @@ theme:
       accent: teal
 
 markdown_extensions:
+  # Officially Supported Extensions
+  - abbr
+  - admonition
+  - meta
+  - sane_lists:
+  - smarty:
+  - toc:
+      permalink: true
+      slugify:
+        !!python/object/apply:pymdownx.slugs.slugify { kwds: { case: lower } }
   - pymdownx.extra
   ### pymdownx.extra replaces markdown.extensions.extra, Here is the full list of included extensions:
   ## pymdownx.betterem
@@ -57,6 +67,9 @@ markdown_extensions:
   ## markdown.extensions.tables
   ## markdown.extensions.abbr
   ## markdown.extensions.md_in_html
+  ## 用不到公式
+  # - pymdownx.arithmatex:
+  #     generic: true
   - pymdownx.highlight:
       guess_lang: true
       linenums: true
@@ -66,10 +79,6 @@ markdown_extensions:
   - pymdownx.smartsymbols
   - pymdownx.critic:
       mode: view
-  - pymdownx.snippets:
-      auto_append:
-        - includes/official_site.md
-        - includes/abbreviations.md
   - pymdownx.caret
   - pymdownx.mark
   - pymdownx.tilde
@@ -80,17 +89,10 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-  # Officially Supported Extensions
-  - abbr
-  - admonition
-  - meta
-  - md_in_html
-  - sane_lists:
-  - smarty:
-  - toc:
-      permalink: true
-      slugify:
-        !!python/object/apply:pymdownx.slugs.slugify { kwds: { case: lower } }
+  - pymdownx.snippets:
+      auto_append:
+        - includes/official_site.md
+        - includes/abbreviations.md
   # 3rd extensions
   - plantuml_markdown:
       ## 如在 Windows 中无法使用 plantuml，可启用这个配置

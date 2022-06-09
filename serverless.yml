@@ -1,0 +1,16 @@
+# 腾讯云 Website 静态网站
+# ref: https://registry.serverless.com/package/website
+
+component: website # (必填) 引用 component 的名称，当前用到的是 tencent-website 组件
+name: sipx-docs # (必填) 该 website 组件创建的实例名称
+# stage: prod # (可选) 用于区分环境信息，默认值是 dev
+
+inputs:
+  src:
+    src: .
+    dist: site
+    hook: python3 -m mkdocs build
+    websitePath: docs/
+  region: ap-guangzhou
+  bucket: sipx-site-1310945165
+  protocol: https

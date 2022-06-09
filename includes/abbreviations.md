@@ -6,6 +6,9 @@ https://squidfunk.github.io/mkdocs-material/reference/abbreviations/#adding-abbr
 
 <!-- markdownlint-disable first-line-heading no-bare-urls -->
 
+*[PSTN]: 公共交换电话网
+*[IMS]: IP Multimedia Subsystem or IP Multimedia Core Network Subsystem (IMS)
+
 [SIPx]: http://sipx.cn/ "SIPx: 实现互联网音视频和SIP话路的互联互通"
 
 *[SIP]: SIP: Session Initiation Protocol
@@ -41,3 +44,14 @@ https://squidfunk.github.io/mkdocs-material/reference/abbreviations/#adding-abbr
 *[OpenAPI]: The OpenAPI Specification (OAS) defines a standard, programming language-agnostic interface description for HTTP APIs, which allows both humans and computers to discover and understand the capabilities of a service without requiring access to source code, additional documentation, or inspection of network traffic.
 
 [OpenAPI]: https://openapis.org/
+
+---
+
+*[REST]: 表现层状态转换(英语: Representational State Transfer，缩写 REST)是一种万维网软件架构风格
+
+*[RESTful]: 表现层状态转换(英语: Representational State Transfer，缩写 REST)是一种万维网软件架构风格
+
+---
+
+[Swagger]: https://swagger.io/
+[Postman]: https://www.postman.com/
