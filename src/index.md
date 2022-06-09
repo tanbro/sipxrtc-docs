@@ -10,7 +10,7 @@
 
 ## 架构
 
-![media path](images/media_path.png)
+![media path](images/media_path.svg)
 
 !!! summary
     [SIPx][] 提供了将电话呼叫加入到 RTC 系统的能力。使用者可视之为 RTC 系统的 ==电话代理==。
