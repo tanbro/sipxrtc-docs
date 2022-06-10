@@ -4,7 +4,7 @@ Footnotes for abbreviations and glossary
 https://squidfunk.github.io/mkdocs-material/reference/abbreviations/#adding-abbreviations
 -->
 
-<!-- markdownlint-disable first-line-heading no-bare-urls -->
+<!-- markdownlint-disable first-line-heading no-bare-urls line-length -->
 
 *[PSTN]: 公共交换电话网
 *[IMS]: IP Multimedia Subsystem or IP Multimedia Core Network Subsystem (IMS)
@@ -34,5 +34,11 @@ https://squidfunk.github.io/mkdocs-material/reference/abbreviations/#adding-abbr
 *[RESTful]: 表现层状态转换(英语: Representational State Transfer，缩写 REST)是一种万维网软件架构风格
 
 [Swagger]: https://swagger.io/
-
 [Postman]: https://www.postman.com/
+[昆石]: https://www.linknat.com/
+[毅航]: http://www.ehangcom.com
+[openSIPS]: https://opensips.org/
+[Kamailio]: https://www.kamailio.org/
+[Asterisk]: https://www.asterisk.org/
+[FreeSWITCH]: https://signalwire.com/
+[linphone]: https://www.linphone.org/

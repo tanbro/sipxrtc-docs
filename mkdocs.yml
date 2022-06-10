@@ -1,26 +1,35 @@
 site_name: SIPx 开发说明
 site_author: 广州市和声信息技术有限公司
-copyright: >
+copyright: |
   <a href="http://www.hesong.net/">广州市和声信息技术有限公司</a> © 2022
 
 docs_dir: src
+custom_dir: overrides
 
 # 目录
 nav:
   - index.md
 
+  - docs/quick-start.md
+
+  - API 使用:
+
+    - 腾讯云 TRTC:
+      - docs/trtc/index.md
+
+    - 阿里云音视频通信 RTC:
+      - docs/aliyunrtc/index.md
+    
 extra:
   generator: false
 
 theme:
   name: material
   language: zh
-  # font: false
+  font: false
   favicon: images/favicon.png
   icon:
     logo: material/webrtc
-
-  # custom_dir: overrides
 
   features:
     - header.autohide
@@ -28,6 +37,7 @@ theme:
     - navigation.sections
     # - navigation.expand
     # - navigation.tabs
+    - navigation.indexes
     - navigation.top
     - toc.integrate
     - content.tooltips
