@@ -9,7 +9,9 @@ https://squidfunk.github.io/mkdocs-material/reference/abbreviations/#adding-abbr
 *[PSTN]: 公共交换电话网
 *[IMS]: IP Multimedia Subsystem or IP Multimedia Core Network Subsystem (IMS)
 
+*[SIPx]: SIPx: 实现互联网音视频和SIP话路的互联互通
 [SIPx]: http://sipx.cn/ "SIPx: 实现互联网音视频和SIP话路的互联互通"
+
 *[SIP]: SIP: Session Initiation Protocol
 [SIP]: https://www.ietf.org/rfc/rfc2543.txt
 
