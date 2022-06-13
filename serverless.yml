@@ -8,8 +8,8 @@ name: sipx-docs # (必填) 该 website 组件创建的实例名称
 inputs:
   src:
     src: .
-    dist: dist
+    dist: dist/cos
     hook: >
-      /bin/sh scripts/build.sh
+      rm -fr ./dist/cos/* && python3 -m mkdocs build -d ./dist/cos/docs
   region: ap-guangzhou
   bucket: sipx-site-1310945165

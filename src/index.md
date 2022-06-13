@@ -38,14 +38,16 @@ OpenAPI
 
 :   [OpenAPI][] 规范 (OAS) 为 RESTful API 定义了语言无关的标准接口，它是目前最流行、最完整的 WebAPI 生态之一。
 
-    [SIPx][] 的 WebAPI 遵循 [OpenAPI][] `3.0` 规范。
-    开发者可以使用 [Swagger][], [Postman][] 等工具方便的进行开发调试，乃至自动代码生成。
+    [SIPx][] 的 WebAPI 遵循 [OpenAPI][] `3.0` 规范，定义了简单易用的接口：
+    一个 HTTP POST 即可完成电话呼叫、RTC 进房等一套操作。
+
+    依托于 [OpenAPI][] 完善的生态，各种主流开发语言/框架都能很好的兼容；开发者可以使用 [Swagger][], [Postman][] 等工具方便的进行开发调试、乃至自动代码生成。
 
 SIP
 
 :   [SIP][] 是传统电话领域 VoIP 应用的行业标准，通过该协议可在 IP 网络上实现实时音视频通信。
 
-    [SIPx][] 使用标准的 [SIP][] 协议与 VoIP 软硬件系统对接，无需 PSTN 线路。
+    [SIPx][] 使用 [SIP][] 协议与 VoIP 软硬件系统通信，无需额外的 PSTN 线路。
 
     支持标准 [SIP][] 协议的软硬件均可与 [SIPx][] 无缝对接，如：
 
