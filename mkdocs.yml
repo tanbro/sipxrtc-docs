@@ -19,7 +19,7 @@ nav:
 
     - 阿里云音视频通信 RTC:
       - docs/aliyunrtc/index.md
-    
+
 extra:
   generator: false
 
