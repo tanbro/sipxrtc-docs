@@ -8,11 +8,8 @@ name: sipx-docs # (必填) 该 website 组件创建的实例名称
 inputs:
   src:
     src: .
-    index: index.html
     dist: dist
     hook: >
       /bin/sh scripts/build.sh
-    websitePath: docs/
   region: ap-guangzhou
   bucket: sipx-site-1310945165
-  protocol: https
