@@ -10,6 +10,6 @@ inputs:
     src: .
     dist: dist/cos
     hook: >
-      rm -fr ./dist/cos/* && python3 -m mkdocs build -d ./dist/cos/docs
+      rm -fr ./dist/cos/* && python3 -m mkdocs build -d ./dist/cos/docs && rm -fr ./dist/cos
   region: ap-guangzhou
   bucket: sipx-site-1310945165

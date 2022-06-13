@@ -1,10 +1,13 @@
 site_name: SIPx 开发说明
 site_author: 广州市和声信息技术有限公司
-copyright: |
-  <a href="http://www.hesong.net/" target="_blank">广州市和声信息技术有限公司</a> © 2022
+copyright: >
+  <p>
+    <a href="http://www.hesong.net/" target="_blank">广州市和声信息技术有限公司</a>
+    © 2022
+  </p>
 
 docs_dir: src
-custom_dir: overrides
+# custom_dir: overrides
 
 # 目录
 nav:

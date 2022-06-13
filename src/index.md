@@ -25,16 +25,16 @@
 ## 支持的 RTC 云服务
 
 <!-- markdownlint-disable line-length no-empty-links -->
-|                         实时音视频系统                          |           支持情况           |
-| --------------------------------------------------------------- | ---------------------------- |
-| [阿里云音视频通信 RTC](https://www.aliyun.com/product/rtc)      | :construction: 开发中        |
-| [腾讯云实时音视频 TRTC](https://cloud.tencent.com/product/trtc) | :ballot_box_with_check: 支持 |
-| [声网](https://www.agora.io/)                                   | :calendar: 规划中            |
+|                         实时音视频系统                          |        支持情况         |
+| --------------------------------------------------------------- | ----------------------- |
+| [阿里云音视频通信 RTC](https://www.aliyun.com/product/rtc)      | :construction: 开发中   |
+| [腾讯云实时音视频 TRTC](https://cloud.tencent.com/product/trtc) | :white_check_mark: 支持 |
+| [声网](https://www.agora.io/)                                   | :calendar: 规划中       |
 <!-- markdownlint-enable -->
 
 ## 技术特点
 
-OpenAPI
+:material-api: OpenAPI
 
 :   [OpenAPI][] 规范 (OAS) 为 RESTful API 定义了语言无关的标准接口，它是目前最流行、最完整的 WebAPI 生态之一。
 
@@ -43,7 +43,7 @@ OpenAPI
 
     依托于 [OpenAPI][] 完善的生态，各种主流开发语言/框架都能很好的兼容；开发者可以使用 [Swagger][], [Postman][] 等工具方便的进行开发调试、乃至自动代码生成。
 
-SIP
+:material-phone-voip: SIP
 
 :   [SIP][] 是传统电话领域 VoIP 应用的行业标准，通过该协议可在 IP 网络上实现实时音视频通信。
 
@@ -67,15 +67,15 @@ SIP
 
 ## 安全
 
-接口安全
+:material-certificate: 接口安全
 
 :   - WebAPI 的请求-回复数据通过 HTTPS 加密传输。
     - WebAPI 采用基于 HMAC-SHA256、带有时间戳的非对称加密验证算法。
 
-号码安全
+:material-lock: 号码安全
 
 :   [SIPx][] 集成全球号码数据库，国内用户默认仅允许呼叫中国大陆地区普通手机号码。
 
-媒体安全
+:material-domino-mask: 媒体安全
 
 :   支持 [SRTP][] 媒体流加密传输。
