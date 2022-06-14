@@ -6,6 +6,8 @@
 
 --8<-- "includes/official_site.md"
 
+---
+
 ## 架构
 
 ![media path](images/media_path.svg)

@@ -16,7 +16,9 @@ nav:
   - docs/quick-start.md
 
   - API 使用:
-      - 腾讯云 TRTC:
+      - docs/signature.md
+
+      - 腾讯云实时音视频 TRTC:
           - docs/trtc/index.md
 
       - 阿里云音视频通信 RTC:
@@ -43,6 +45,7 @@ theme:
     - navigation.top
     - toc.integrate
     - content.tooltips
+    - content.code.annotate
 
   palette:
     - media: "(prefers-color-scheme: light)"
@@ -85,6 +88,7 @@ markdown_extensions:
   - pymdownx.highlight:
       guess_lang: true
       linenums: true
+      anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.details
   - pymdownx.saneheaders
