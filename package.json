@@ -1,0 +1,20 @@
+{
+  "name": "sipxdocs",
+  "version": "1.0.0",
+  "description": "SIPx 的文档站。",
+  "scripts": {
+    "build": "dotenv -- bash -c '[ -z \"$MKDOCS\" ] && MKDOCS=mkdocs; $MKDOCS build'",
+    "serve": "dotenv -- bash -c '[ -z \"$MKDOCS\" ] && MKDOCS=mkdocs; $MKDOCS serve -a localhost:8080'",
+    "build:serverless": "dotenv -- sh -c '[ -z \"$MKDOCS\" ] && MKDOCS=mkdocs; rm -fr out/cos && mkdir -p out/cos && $MKDOCS build -d out/cos/docs'",
+    "deploy:serverless": "serverless deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xinmeigz/sipxrtc-docs.git"
+  },
+  "homepage": "https://github.com/xinmeigz/sipxrtc-docs#readme",
+  "devDependencies": {
+    "dotenv-cli": "^5.1.0",
+    "serverless": "^3.19.0"
+  }
+}
