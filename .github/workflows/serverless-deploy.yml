@@ -32,6 +32,10 @@ jobs:
         run: |
           npm install --include=dev
 
+      - name: install serverless
+        run: |
+          npm install -g serverless @serverless/components
+
       - name: serverless deploy
         run: |
-          npx serverless deploy
+          serverless deploy
