@@ -30,6 +30,7 @@ jobs:
 
       - name: npm install
         run: |
+          dotenv --help
           npm install --location=global serverless dotenv-cli
 
       - name: serverless deploy
