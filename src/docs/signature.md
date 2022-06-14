@@ -91,18 +91,18 @@ result = s.rstrip("=")
 ```
 <!-- markdownlint-enable code-block-style -->
 
-### Python
-
-<!-- markdownlint-disable code-block-style -->
-```py
---8<-- "snippets/signature.py"
-```
-<!-- markdownlint-enable code-block-style -->
-
 ### PHP
 
 <!-- markdownlint-disable code-block-style -->
 ```py
 --8<-- "snippets/signature.php"
+```
+<!-- markdownlint-enable code-block-style -->
+
+### Python
+
+<!-- markdownlint-disable code-block-style -->
+```py
+--8<-- "snippets/signature.py"
 ```
 <!-- markdownlint-enable code-block-style -->
