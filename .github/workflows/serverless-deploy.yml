@@ -34,4 +34,6 @@ jobs:
 
       - name: serverless deploy
         run: |
-          SLS_GEO_LOCATION=cn npx serverless deploy
+          export SERVERLESS_PLATFORM_VENDOR=tencent
+          npx serverless credentials set --secretId ${{ secrets.TENCENT_SECRET_ID }} --secretKey ${{ secrets.TENCENT_SECRET_KEY }}
+          npx serverless deploy
