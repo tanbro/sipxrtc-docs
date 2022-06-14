@@ -30,11 +30,7 @@ jobs:
 
       - name: npm install
         run: |
-          npm install --include=dev
-
-      - name: install serverless
-        run: |
-          npm install -g serverless @serverless/components
+          npm install --location=global serverless dotenv-cli
 
       - name: serverless deploy
         run: |
