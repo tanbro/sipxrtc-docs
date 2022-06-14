@@ -31,8 +31,9 @@ jobs:
       - name: npm install
         run: |
           npm install dotenv-cli
-          npm install --location=global serverless
+          npm install --location=global serverless @serverless/components
 
       - name: serverless deploy
         run: |
+          which serverless
           serverless deploy
