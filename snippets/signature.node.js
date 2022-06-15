@@ -1,12 +1,12 @@
 const crypto = require("crypto");
 
-const api_key = "23456789";
-const api_secret = "k69x50j0";
-const expire_at = "1893456000";
+const API_KEY = "23456789";
+const API_SECRET = "k69x50j0";
+const EXPIRE_AT = "1893456000";
 
-const hmac = crypto.createHmac("sha256", api_secret);
-hmac.update(api_key);
-hmac.update(expire_at);
+const hmac = crypto.createHmac("sha256", API_SECRET);
+hmac.update(API_KEY);
+hmac.update(EXPIRE_AT);
 const digest = hmac.digest("base64");
 
 const signature = digest

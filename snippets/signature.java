@@ -8,13 +8,13 @@ import org.apache.commons.lang3.StringUtils;
 class SignatureSnippet {
     public static void main(String args[]) throws Exception {
 
-        String api_key = "23456789";
-        String api_secret = "k69x50j0";
-        String expire_at = "1893456000";
+        String API_KEY = "23456789";
+        String API_SECRET = "k69x50j0";
+        String EXPIRE_AT = "1893456000";
 
         String algorithm = "HmacSHA256";
-        byte[] key = api_secret.getBytes();
-        byte[] msg = (api_key + expire_at).getBytes();
+        byte[] key = API_SECRET.getBytes();
+        byte[] msg = (API_KEY + EXPIRE_AT).getBytes();
 
         Mac mac = Mac.getInstance(algorithm);
         SecretKeySpec secretKeySpec = new SecretKeySpec(key, algorithm);
