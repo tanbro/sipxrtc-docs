@@ -60,9 +60,9 @@
       | ------------------------ | --------------------------------- |
       | `TRTC_ROOM_ID`           | TRTC 房间 ID                      |
 
-## SIPx WebAPI 签名
+## API 签名
 
-本文档的 [签名算法](signature.md) 章节详细说明了如何对 WebAPI 进行签名。
+[签名算法](signature.md) 这一章详细说明了如何对 [SIPx][] WebAPI 进行签名。
 
 在按照此章节的说明生成签名之后，我们使用以下变量表示得到的签名数据:
 
@@ -73,9 +73,12 @@
 | `EXPIRE_AT`              | `#!js "1893456000"`                                  | 签名过期时间戳                    |
 | `SIGNATURE`              | `#!js "d7vG2xBURXT-M-BdmFcCLYTHIh1chSo6SG3KT9SNhMk"` | 签名的密文                        |
 
-## 调用 SIPx 的 WebAPI
+!!! attention
+    实际编写程序时，请将上面的举例的签名数据替换成真实有效的值。
 
-[SIPx][] 的 OpenAPI 接口 `/v2205/trtc/startup` 用于发起针对 TRTC 房间等电话呼叫。
+## `trtc/startup` WebAPI 接口
+
+[SIPx][] 的 OpenAPI 接口 `/v2205/trtc/startup` 用于发起针对 TRTC 的电话呼叫。
 
 !!! example
     我们向这个接口发送带有如下的 JSON 数据的 HTTP 请求：
@@ -98,22 +101,26 @@
     [SIPx][] 收到这个请求后:
 
     1. 读取 URL 的 Query string 进行签名验证。
-    1. 以 TRTC 用户 `telephone` 的身份进入 ID 为 `8888` 的房间。
-    1. 呼叫手机号码 `18888888888`（不是真实存在的号码，仅用于举例）。
+    1. 以 TRTC 用户 `"telephone"` 的身份进入 ID 为 `8888` 的房间。
+    1. 呼叫手机号码 `"18888888888"`（不是真实存在的号码，仅用于举例）。
     1. 将手机呼叫的音频传入 TRTC 房间，同时将房间内所有发言用户的音频混流后传给手机。
     
-    [SIPx] 在成功进入房间，且号码有效、呼叫可以启动时，进行 HTTP 回复，在 Body 中用 JSON 格式返回执行的结果 ID:
+    [SIPx] 在成功进入 TRTC 房间后，如果号码有效、呼叫可以启动，就回复这一 HTTP 请求，并在回复的内容数据中用 JSON 格式返回执行的结果 ID。
+    如：
 
-    ```json
+    ```http title="HTTP Response"
+    HTTP/1.1 200 OK
+    Content-Type: application/json
+
     {
         "id": "1d6bb77c"  // 此次呼叫的 ID
     }
     ```
 
-我们编写一个简单的命令行程序，让它调用 SIPx 的 TRTC 呼叫开始接口。
-
 !!! tips
-    可访问 <https://static.sipx.cn/openapi/v2205/swagger-ui/>{target="_blank"} 查看详细的 OpenAPI 定义
+    访问 <https://static.sipx.cn/openapi/v2205/swagger-ui/>{target="_blank"} 查看详细的 OpenAPI 定义
+
+## 例程代码片段
 
 === "Node.JS"
 
@@ -121,52 +128,17 @@
     --8<-- "snippets/trtc_startup.js"
     ```
 
+=== "PHP"
+
+    ```php
+    --8<-- "snippets/trtc_startup.php"
+    ```
+
 === "Python"
 
     ```py
     --8<-- "snippets/trtc_startup.py"
     ```
-
-=== "PHP"
-
-    ```php
-    <?php
-
-    $curl = curl_init();
-
-    curl_setopt_array($curl, array(
-      CURLOPT_URL => 'https://api.sipx.cn/v2205/trtc/startup',
-      CURLOPT_RETURNTRANSFER => true,
-      CURLOPT_CUSTOMREQUEST => 'POST',
-      CURLOPT_POSTFIELDS =>'{
-          "trtcParams": {
-            "sdkAppId": 123,
-            "userId": "telephone",
-            "userSig": "xxxxxx",
-            "roomId": 456
-          },
-          "phonenumber": "13987654321"
-    }',
-      CURLOPT_HTTPHEADER => array(
-        'Content-Type: application/json'
-      ),
-    ));
-
-    $response = curl_exec($curl);
-
-    curl_close($curl);
-    echo $response;
-    ```
-
-xxxxx
-
-=== "Python"
-
-    this is python
-
-=== "Node.JS"
-
-    this is nodejs
 
 [Web Demo]: https://web.sdk.qcloud.com/trtc/webrtc/demo/quick-demo-js/index.html
 [实时音视频控制台]: https://console.cloud.tencent.com/trtc
