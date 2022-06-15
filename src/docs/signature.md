@@ -62,14 +62,13 @@ result = s.rstrip("=")
 | `api_key`                | `"23456789"`               |
 | `api_secret`             | `"k69x50j0"`               |
 
-另假设签名过期在 UTC 时间 2023年1月1日0点(`2023-01-01T00:00:00+00:00`)，其 Unix Epoch 时间戳是 `1672531200`。
+另假设签名过期在 UTC 时间 2030年1月1日0点(`2030-01-01T00:00:00+00:00`)，其 Unix Epoch 时间戳是 `1893456000`。
 
-那么，得到的签名结果会是 `VUUnKfDFh3ACTPP-vafVo_nwAP6PZ2HOZznBOviWfNE`，
-而 WebAPI 请求的 URL query string 部分应是:
+那么，得到的签名结果会是 `d7vG2xBURXT-M-BdmFcCLYTHIh1chSo6SG3KT9SNhMk`，对应的 WebAPI 请求 URL query string 部分应是:
 
 <!-- markdownlint-disable code-block-style -->
 ```title="带有签名参数的 URL Query String 部分"
-?api_key=23456789&expire_at=1672531200&signature=VUUnKfDFh3ACTPP-vafVo_nwAP6PZ2HOZznBOviWfNE
+?api_key=23456789&expire_at=1672531200&signature=d7vG2xBURXT-M-BdmFcCLYTHIh1chSo6SG3KT9SNhMk
 ```
 <!-- markdownlint-enable code-block-style -->
 
@@ -77,29 +76,41 @@ result = s.rstrip("=")
 
 以下是几种常见语言的签名算法实现代码片段。
 
-### JavaScript
+### :material-language-java: `Java`
 
 <!-- markdownlint-disable code-block-style -->
-```js title="Node.js"
---8<-- "snippets/signature-node.js"
+```java
+--8<-- "snippets/signature.java"
 ```
 <!-- markdownlint-enable code-block-style -->
 
-<!-- markdownlint-disable code-block-style -->
-```js title="Browser"
---8<-- "snippets/signature-browser.js"
-```
-<!-- markdownlint-enable code-block-style -->
+### :material-language-javascript: `JavaScript`
 
-### PHP
+- :material-nodejs: `Node.js`
+
+    <!-- markdownlint-disable code-block-style -->
+    ```js
+    --8<-- "snippets/signature-node.js"
+    ```
+    <!-- markdownlint-enable code-block-style -->
+
+- :fontawesome-brands-chrome: :fontawesome-brands-firefox-browser: :fontawesome-brands-edge: :fontawesome-brands-safari: `Browser`
+
+    <!-- markdownlint-disable code-block-style -->
+    ```js title="Browser"
+    --8<-- "snippets/signature-browser.js"
+    ```
+    <!-- markdownlint-enable code-block-style -->
+
+### :material-language-php: `PHP`
 
 <!-- markdownlint-disable code-block-style -->
-```py
+```php
 --8<-- "snippets/signature.php"
 ```
 <!-- markdownlint-enable code-block-style -->
 
-### Python
+### :material-language-python: `Python`
 
 <!-- markdownlint-disable code-block-style -->
 ```py

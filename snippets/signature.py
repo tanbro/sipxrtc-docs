@@ -1,15 +1,12 @@
 import hmac
 from base64 import urlsafe_b64encode
+from hashlib import sha256
 
-api_key = '23456789'
-api_secret = 'k69x50j0'
-expire_at = 1672531200
+api_key = b'23456789'
+api_secret = b'k69x50j0'
+expire_at = b'1893456000'
 
-h = hmac.new(api_secret.encode(), digestmod='sha256')
-h.update(api_key.encode())
-h.update(str(expire_at).encode())
-digest = h.digest()
+digest = hmac.new(api_secret, api_key + expire_at, sha256).digest()
+signature = urlsafe_b64encode(digest).rstrip(b'=')
 
-signature = urlsafe_b64encode(digest).decode().rstrip('=')
-
-print(f'Signature: {signature}')
+print('Signature: {}'.format(signature.decode()))
