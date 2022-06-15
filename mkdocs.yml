@@ -33,7 +33,7 @@ theme:
   font: false
   favicon: images/favicon.png
   icon:
-    logo: material/webrtc
+    logo: material/phone-voip
 
   features:
     - header.autohide

@@ -74,7 +74,7 @@
 :   - WebAPI 的请求-回复数据通过 HTTPS 加密传输。
     - WebAPI 采用基于 HMAC-SHA256、带有时间戳的非对称加密验证算法。
 
-:material-lock: 号码安全
+:material-phone-lock: 号码安全
 
 :   [SIPx][] 集成全球号码数据库，国内用户默认仅允许呼叫中国大陆地区普通手机号码。
 

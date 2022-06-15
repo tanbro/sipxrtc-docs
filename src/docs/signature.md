@@ -74,7 +74,7 @@ result = s.trim_end("=")
 ```
 <!-- markdownlint-enable code-block-style -->
 
-## 代码实现举例
+## 例子代码
 
 以下是几种常见语言的签名算法实现代码片段。
 
@@ -96,10 +96,10 @@ result = s.trim_end("=")
     ```
     <!-- markdownlint-enable code-block-style -->
 
-- :fontawesome-brands-chrome: :fontawesome-brands-firefox-browser: :fontawesome-brands-edge: :fontawesome-brands-safari: `Browser`
+- :material-language-html5: `Browser`
 
     <!-- markdownlint-disable code-block-style -->
-    ```js title="Browser"
+    ```js
     --8<-- "snippets/signature.browser.js"
     ```
     <!-- markdownlint-enable code-block-style -->

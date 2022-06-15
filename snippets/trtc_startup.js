@@ -56,7 +56,7 @@ let payload = JSON.stringify({
     userSig: TRTC_USER_SIG,
     roomId: TRTC_ROOM_ID,
   },
-  phonenumber: "18888888888",
+  phonenumber: "88888888888",
 });
 
 req.write(payload);

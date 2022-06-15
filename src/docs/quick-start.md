@@ -76,51 +76,67 @@
 !!! attention
     实际编写程序时，请将上面的举例的签名数据替换成真实有效的值。
 
-## `trtc/startup` WebAPI 接口
+## 调用 API
 
 [SIPx][] 的 OpenAPI 接口 `/v2205/trtc/startup` 用于发起针对 TRTC 的电话呼叫。
 
-!!! example
-    我们向这个接口发送带有如下的 JSON 数据的 HTTP 请求：
+我们向这个接口 POST 带有如下的 JSON 数据的 HTTP 请求：
 
-    ```http title="HTTP Request"
-    POST /v2205/trtc/startup?api_key=23456789&expire_at=1672531200&signature=d7vG2xBURXT-M-BdmFcCLYTHIh1chSo6SG3KT9SNhMk HTTP/1.1
-    Host: api.sipx.cn
-    Content-Type: application/json
-    
-    {
-        "trtcParams": {
-            "userId": "telephone",
-            "userSig": "xxxxxxxx",
-            "roomId": 8888
-        },
-        "phonenumber": "18888888888"
-    }
-    ```
+<!-- markdownlint-disable code-block-style -->
+```http title="HTTP Request"
+POST /v2205/trtc/startup?api_key=23456789&expire_at=1672531200&signature=d7vG2xBURXT-M-BdmFcCLYTHIh1chSo6SG3KT9SNhMk HTTP/1.1
+Host: api.sipx.cn
+Content-Type: application/json
 
-    [SIPx][] 收到这个请求后:
+{
+    "trtcParams": {
+        "userId": "telephone",
+        "userSig": "xxxxxxxx",
+        "roomId": 8888
+    },
+    "phonenumber": "88888888888"
+}
+```
+<!-- markdownlint-enable -->
 
-    1. 读取 URL 的 Query string 进行签名验证。
-    1. 以 TRTC 用户 `"telephone"` 的身份进入 ID 为 `8888` 的房间。
-    1. 呼叫手机号码 `"18888888888"`（不是真实存在的号码，仅用于举例）。
-    1. 将手机呼叫的音频传入 TRTC 房间，同时将房间内所有发言用户的音频混流后传给手机。
-    
-    [SIPx] 在成功进入 TRTC 房间后，如果号码有效、呼叫可以启动，就回复这一 HTTP 请求，并在回复的内容数据中用 JSON 格式返回执行的结果 ID。
-    如：
+[SIPx][] 收到这个请求后:
 
-    ```http title="HTTP Response"
-    HTTP/1.1 200 OK
-    Content-Type: application/json
+1. 读取 URL 的 Query string 进行签名验证。
+1. 以 TRTC 用户 `"telephone"` 的身份进入 ID 为 `8888` 的房间。
+1. 呼叫手机号码 `"88888888888"`（它不是真实存在的号码，仅用于举例）。
+1. 将手机呼叫的音频传入 TRTC 房间，同时将房间内所有发言用户的音频混流后传给手机。
 
-    {
-        "id": "1d6bb77c"  // 此次呼叫的 ID
-    }
-    ```
+[SIPx] 在成功进入 TRTC 房间后，如果号码有效、呼叫可以启动，就回复这一 HTTP 请求，并在回复的内容数据中用 JSON 格式返回执行的结果 ID。
+如：
+
+<!-- markdownlint-disable code-block-style -->
+```http title="HTTP Response"
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+    "id": "1d6bb77c"  // 此次呼叫的 ID
+}
+```
+<!-- markdownlint-enable -->
 
 !!! tips
-    访问 <https://static.sipx.cn/openapi/v2205/swagger-ui/>{target="_blank"} 查看详细的 OpenAPI 定义
+    访问
+    <https://static.sipx.cn/openapi/v2205/swagger-ui/>{target="_blank"}
+    查看详细的 OpenAPI 定义
 
-## 例程代码片段
+!!! attention
+    实际调测时，请将上面的例子中的 ID、签名、用户名等数据替换成真实的值。
+
+## 例子代码
+
+以下是使用几种常见编程语言或开发工具调用该 WebAPI 的代码片段。
+
+=== "cURL"
+
+    ```bash
+    --8<-- "snippets/trtc_startup.curl.sh"
+    ```
 
 === "Node.JS"
 
@@ -136,9 +152,23 @@
 
 === "Python"
 
+    !!! info
+        以下代码**不兼容**老旧的 python2 标准
+
     ```py
     --8<-- "snippets/trtc_startup.py"
     ```
+
+!!! attention
+    注意要将例子代码中的 ID、签名、用户名、电话号码等数据替换成真实的值。
+
+## 体验使用
+
+回到 TRTC [Web Demo][]{target="_blank"} 页面，点击 `Join Room` 按钮，进入房间。
+
+然后执行上一节的例子代码。执行成功后，[SIPx][] 将呼叫指定的电话，并将电话呼叫音频导入房间，浏览器和电话可进行通话。
+
+可以邀请更多人通过 [Web Demo][]{target="_blank"} 进入房间，形成多客户端到电话的语音通话。
 
 [Web Demo]: https://web.sdk.qcloud.com/trtc/webrtc/demo/quick-demo-js/index.html
 [实时音视频控制台]: https://console.cloud.tencent.com/trtc
