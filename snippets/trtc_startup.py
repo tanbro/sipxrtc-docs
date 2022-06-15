@@ -27,7 +27,7 @@ qs = urlencode({
 })
 
 req = Request(
-    f'{server}{path}?{qs}',
+    '{}{}?{}'.format(server, path, qs),
     method='POST',
     headers={
         'Content-Type': 'application/json'
