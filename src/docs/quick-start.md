@@ -18,14 +18,14 @@
 
     - 安装 Chrome, Firefox, Edge, Safari 等主流 Browser 的较新版本(只需安装其中之一)
 
-        浏览器要同时具备接收（播放）与发送（上麦）能力。详情请参考 <https://cloud.tencent.com/document/product/647/17249>
+        浏览器要同时具备接收（播放）与发送（上麦）能力。详情请参考 <https://cloud.tencent.com/document/product/647/17249>{target="_blank"}
 
-1. 另一台主流配置的 PC 或 Mac 计算机，在这台电脑上安装并配置 [linphone][]用于模拟手机:
+1. 另一台主流配置的 PC 或 Mac 计算机，在这台电脑上安装并配置 [linphone][] 用于模拟手机:
 
     该计算机应配有：麦克风，头戴式耳机(不推荐使用外放音源，以防回声噪音)
 
     !!! note
-        [linphone][]{target="_blank"} 是 GPL 授权的，功能较为齐全的通用 SIP 开源“软电话”。
+        [linphone][]{target="_blank"} 是功能较为齐全的 GPL 授权开源 SIP “软电话”。
         它可用来代替真实的 VoIP 线路、网关、服务进行简便快速的呼叫体验。
 
         我们需要配置 [linphone][]{target="_blank"} 向 [SIPx][] 进行 SIP 注册。
@@ -48,7 +48,7 @@
 
         ---
 
-        > ⚠️ **请注意妥善保管密码！**
+        > ⚠️ ==**请注意妥善保管密码！**==
 
         ---
 
@@ -107,7 +107,7 @@
 
 1. 在第一台计算机上用浏览器(推荐使用 Chrome)访问 TRTC 检测页面(<https://web.sdk.qcloud.com/trtc/webrtc/demo/detect/index.html>{target="_blank"})，进行设备支持检测，确保检测通过。
 
-1. 在第一台计算机上用通过检测的浏览器打开腾讯云官方 [Web Demo][]{target="_blank"} (<https://web.sdk.qcloud.com/trtc/webrtc/demo/quick-demo-js/index.html>)。打开后，请仔细阅读页面的说明。
+1. 在第一台计算机上用通过检测的浏览器打开腾讯云官方 [Web Demo][]{target="_blank"} (<https://web.sdk.qcloud.com/trtc/webrtc/demo/quick-demo-js/index.html>{target="_blank"})。打开后，请仔细阅读页面的说明。
 
     [Web Demo][]{target="_blank"} 页面初始化成功之后，会自动分配 `UserId` 和 `RoomId`，当然我们也可以手动修改。
 
@@ -205,34 +205,42 @@ Content-Type: application/json
 
 以下是使用几种常见编程语言或开发工具调用该 WebAPI 的代码片段。
 
+<!-- markdownlint-disable no-space-in-code -->
 === "cURL"
-
     ```bash
     --8<-- "snippets/trtc_startup.curl.sh"
     ```
-=== "Java"
 
+=== "PowerShell"
+    ```powershell
+    --8<-- "snippets/trtc_startup.ps1"
+    ```
+
+=== "Java"
     ```java
     --8<-- "snippets/trtc_startup.java"
     ```
 
-=== "Node.js"
-
+=== "JavaScript(Node.js)"
     ```js
-    --8<-- "snippets/trtc_startup.js"
+    --8<-- "snippets/trtc_startup.node.js"
+    ```
+
+=== "JavaScript(Browser.js)"
+    ```js
+    --8<-- "snippets/trtc_startup.browser.js"
     ```
 
 === "PHP"
-
     ```php
     --8<-- "snippets/trtc_startup.php"
     ```
 
 === "Python"
-
     ```py
     --8<-- "snippets/trtc_startup.py"
     ```
+<!-- markdownlint-enable -->
 
 !!! attention
     注意要将例子代码中的 ID、签名、用户名、电话号码等数据替换成真实的值。

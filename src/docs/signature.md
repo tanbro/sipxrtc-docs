@@ -78,44 +78,29 @@ result = s.trim_end("=")
 
 以下是几种常见语言的签名算法实现代码片段。
 
-### :material-language-java: `Java`
+<!-- markdownlint-disable no-space-in-code -->
+=== "Java"
+    ```java
+    --8<-- "snippets/signature.java"
+    ```
 
-<!-- markdownlint-disable code-block-style -->
-```java
---8<-- "snippets/signature.java"
-```
-<!-- markdownlint-enable code-block-style -->
-
-### :material-language-javascript: `JavaScript`
-
-- :material-nodejs: `Node.js`
-
-    <!-- markdownlint-disable code-block-style -->
+=== "JavaScript(Node.js)"
     ```js
     --8<-- "snippets/signature.node.js"
     ```
-    <!-- markdownlint-enable code-block-style -->
 
-- :material-language-html5: `Browser`
-
-    <!-- markdownlint-disable code-block-style -->
+=== "JavaScript(Browser)"
     ```js
     --8<-- "snippets/signature.browser.js"
     ```
-    <!-- markdownlint-enable code-block-style -->
 
-### :material-language-php: `PHP`
+=== "PHP"
+    ```php
+    --8<-- "snippets/signature.php"
+    ```
 
-<!-- markdownlint-disable code-block-style -->
-```php
---8<-- "snippets/signature.php"
-```
-<!-- markdownlint-enable code-block-style -->
-
-### :material-language-python: `Python`
-
-<!-- markdownlint-disable code-block-style -->
-```py
---8<-- "snippets/signature.py"
-```
-<!-- markdownlint-enable code-block-style -->
+=== "Python"
+    ```py
+    --8<-- "snippets/signature.py"
+    ```
+<!-- markdownlint-enable -->
