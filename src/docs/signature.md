@@ -60,11 +60,12 @@ signature = base64_encode(data).replace('-', '+').replace('_', '/').trim_end('='
 
 | :material-variable: 参数 | :material-variable-box: 值 |
 | ------------------------ | -------------------------- |
-| `API_KEY`                | `#!js "23456789"`          |
-| `API_SECRET`             | `#!js "k69x50j0"`          |
+| `API_KEY`                | `"23456789"`               |
+| `API_SECRET`             | `"k69x50j0"`               |
 
 另假设签名过期在 UTC 时间 2030年1月1日0点(`2030-01-01T00:00:00+00:00`)，其 Unix Epoch 时间戳是 `1893456000`。
 
+<!-- markdownlint-disable-next-line -->
 那么，得到的签名结果会是 `d7vG2xBURXT-M-BdmFcCLYTHIh1chSo6SG3KT9SNhMk`，对应的 WebAPI 请求 URL query string 部分应是:
 
 <!-- markdownlint-disable code-block-style -->
