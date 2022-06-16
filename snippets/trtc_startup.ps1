@@ -4,10 +4,10 @@ $headers.Add("Content-Type", "application/json")
 $body = "{`
     `"trtcParams`": {`
         `"userId`": `"telephone`",`
-        `"userSig`": `"eJwtzE0LgkAUheH-Muuw69gMJbRoyohKCkZo48aYW91SG9SkD-rvmbo8zwvnw6KtdmosmM*4A2zQbjKYV3SilitM0V7uOfaxNLfEWjLMd0cAUgKHcVfwaanAxoUQHAA6rSj7mxQeeBNX9FrSufnWuniliQrKgzyq3TIK64fQksfDVbA2Gb*G*-diNlcbrUKYsu8PZkUyoA__`",`
-        `"roomId`": 1001`
+        `"userSig`": `"xxxxxxxx`",`
+        `"roomId`": 8888`
         },`
-        `"phonenumber`": `"18602015268`"`
+        `"phonenumber`": `"88888888888`"`
     }"
 
 $response = Invoke-RestMethod `
