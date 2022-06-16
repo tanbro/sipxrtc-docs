@@ -30,10 +30,12 @@ extra:
 theme:
   name: material
   language: zh
-  font: false
-  favicon: images/favicon.png
-  icon:
-    logo: material/phone-voip
+  font:
+    false
+    # text: Noto Sans Simplified Chinese
+    # code: Noto Sans Mono
+  favicon: images/favicon.ico
+  logo: images/logo.png
 
   features:
     - header.autohide

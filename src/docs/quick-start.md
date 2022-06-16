@@ -165,11 +165,18 @@ Content-Type: application/json
 ```
 <!-- markdownlint-enable -->
 
+<!-- markdownlint-disable line-length -->
+!!! important
+    这里的 `userId` 与 `userSig` 参数，来自我们在 [实时音视频控制台][]{target="_blank"} 中，为 [SIPx][] 专门分配的用户。[SIPx][] 使用这个用户进行 RTC 与电话之间的音频交换。在本例中，该用户名为 `telephone`。
+
+    `roomId` 来自 [Web Demo][]{target="_blank"} 中的房间ID（例中的 `8888` 仅用于示例，不代表实际情况）。我们需要让 [SIPx][] 使用的 `telephone` 用户和 [Web Demo][]{target="_blank"} 中的普通用户进入同一个房间，方可实现声音互通。
+<!-- markdownlint-enable -->
+
 [SIPx][] 收到这个请求后:
 
 1. 读取 URL 的 Query string 进行签名验证。
-1. 以 TRTC 用户 `"telephone"` 的身份进入 ID 为 `8888` 的 TRTC 房间。
-1. 呼叫手机号码 `"88888888888"`（它不是真实存在的号码，仅用于举例）。
+1. 以 TRTC 用户 `telephone` （仅用于示例，不代表实际情况）的身份进入 ID 为 `8888` （仅用于示例，不代表实际情况）的 TRTC 房间。
+1. 呼叫手机号码 `88888888888`（它不是真实存在的号码，仅用于举例，不代表实际情况）。
 1. 将手机呼叫的音频传入 TRTC 房间，同时将房间内所有发言用户的音频混流后传给手机。
 
 [SIPx] 在成功进入 TRTC 房间后，如果号码有效、呼叫可以启动，就对这一 HTTP 请求进行回复，并在内容数据中用 JSON 格式返回执行的结果 ID。
@@ -186,10 +193,10 @@ Content-Type: application/json
 ```
 <!-- markdownlint-enable -->
 
+<!-- markdownlint-disable line-length -->
 !!! tips
-    访问
-    <https://static.sipx.cn/openapi/v2205/swagger-ui/>{target="_blank"}
-    查看详细的 OpenAPI 定义
+    访问 <https://static.sipx.cn/openapi/v2205/swagger-ui/>{target="_blank"} 查看详细的 OpenAPI 定义
+<!-- markdownlint-enable -->
 
 !!! attention
     实际调测时，请将上面的例子中的 ID、签名、用户名等数据替换成真实的值。
@@ -203,8 +210,13 @@ Content-Type: application/json
     ```bash
     --8<-- "snippets/trtc_startup.curl.sh"
     ```
+=== "Java"
 
-=== "Node.JS"
+    ```java
+    --8<-- "snippets/trtc_startup.java"
+    ```
+
+=== "Node.js"
 
     ```js
     --8<-- "snippets/trtc_startup.js"
@@ -217,7 +229,6 @@ Content-Type: application/json
     ```
 
 === "Python"
-    > :snake: **以下代码不支持 `python2`**
 
     ```py
     --8<-- "snippets/trtc_startup.py"
@@ -228,7 +239,7 @@ Content-Type: application/json
 
 ## 体验使用
 
-回到第一台电脑的 TRTC [Web Demo][]{target="_blank"} 页面，点击 `Join Room` 按钮，进入房间。
+回到第一台电脑的 TRTC [Web Demo][]{target="_blank"} 页面，点击 *Join Room* 按钮，进入房间。
 
 然后执行上一节的例子代码。执行成功后，[SIPx][] 将呼叫第二台计算机上的 [linphone][]。
 在 [linphone][] 收到 SIP 呼叫后，我们选择接听。
