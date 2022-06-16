@@ -15,7 +15,6 @@
   "homepage": "https://github.com/xinmeigz/sipxrtc-docs#readme",
   "devDependencies": {
     "dotenv-cli": "^5.1.0",
-    "serverless": "^3.19.0",
-    "@serverless/components": "^3.18.2"
+    "serverless": "^3.19.0"
   }
 }
