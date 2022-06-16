@@ -44,7 +44,7 @@
 
 得到的结果就是签名字符串。
 
-该算法还可用以下伪代码表示:
+该算法可用以下伪代码表示:
 
 <!-- markdownlint-disable code-block-style -->
 ```py
@@ -54,7 +54,7 @@ mac.update(expire_at)
 data = mac.digest()
 signature = base64_encode(data).replace('-', '+').replace('_', '/').trim_end('=')
 ```
-<!-- markdownlint-enable code-block-style -->
+<!-- markdownlint-enable -->
 
 假设 [SIPx][] 为开发者分配的 `api` 密钥对是:
 
@@ -65,13 +65,13 @@ signature = base64_encode(data).replace('-', '+').replace('_', '/').trim_end('='
 
 另假设签名过期在 UTC 时间 2030年1月1日0点(`2030-01-01T00:00:00+00:00`)，其 Unix Epoch 时间戳是 `1893456000`。
 
-那么，得到的签名结果会是 `#!js "d7vG2xBURXT-M-BdmFcCLYTHIh1chSo6SG3KT9SNhMk"`，对应的 WebAPI 请求 URL query string 部分应是:
+那么，得到的签名结果会是 `d7vG2xBURXT-M-BdmFcCLYTHIh1chSo6SG3KT9SNhMk`，对应的 WebAPI 请求 URL query string 部分应是:
 
 <!-- markdownlint-disable code-block-style -->
 ```linenums="0"
 ?api_key=23456789&expire_at=1672531200&signature=d7vG2xBURXT-M-BdmFcCLYTHIh1chSo6SG3KT9SNhMk
 ```
-<!-- markdownlint-enable code-block-style -->
+<!-- markdownlint-enable -->
 
 ## 例子代码
 
