@@ -47,13 +47,12 @@
 该算法还可用以下伪代码表示:
 
 <!-- markdownlint-disable code-block-style -->
-```py title="签名算法伪代码"
-m = hmac_sha256(key=api_secret)
-m.update(api_key)
-m.update(expire_at)
-d = m.digest()
-s = base64_encode_urlsafe(d)
-result = s.trim_end("=")
+```py
+mac = hmac_sha256(key=api_secret)
+mac.update(api_key)
+mac.update(expire_at)
+data = mac.digest()
+signature = base64_encode(data).replace('-', '+').replace('_', '/').trim_end('=')
 ```
 <!-- markdownlint-enable code-block-style -->
 
@@ -64,12 +63,12 @@ result = s.trim_end("=")
 | `API_KEY`                | `#!js "23456789"`          |
 | `API_SECRET`             | `#!js "k69x50j0"`          |
 
-另假设签名过期在 UTC 时间 2030年1月1日0点(`2030-01-01T00:00:00+00:00`)，其 Unix Epoch 时间戳是 `#!js 1893456000`。
+另假设签名过期在 UTC 时间 2030年1月1日0点(`2030-01-01T00:00:00+00:00`)，其 Unix Epoch 时间戳是 `1893456000`。
 
 那么，得到的签名结果会是 `#!js "d7vG2xBURXT-M-BdmFcCLYTHIh1chSo6SG3KT9SNhMk"`，对应的 WebAPI 请求 URL query string 部分应是:
 
 <!-- markdownlint-disable code-block-style -->
-```title="签名的 URL Query String"
+```linenums="0"
 ?api_key=23456789&expire_at=1672531200&signature=d7vG2xBURXT-M-BdmFcCLYTHIh1chSo6SG3KT9SNhMk
 ```
 <!-- markdownlint-enable code-block-style -->
@@ -84,14 +83,14 @@ result = s.trim_end("=")
     --8<-- "snippets/signature.java"
     ```
 
-=== "JavaScript(Node.js)"
-    ```js
-    --8<-- "snippets/signature.node.js"
-    ```
-
 === "JavaScript(Browser)"
     ```js
     --8<-- "snippets/signature.browser.js"
+    ```
+
+=== "JavaScript(Node.js)"
+    ```js
+    --8<-- "snippets/signature.node.js"
     ```
 
 === "PHP"

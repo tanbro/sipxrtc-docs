@@ -211,14 +211,14 @@ Content-Type: application/json
     --8<-- "snippets/trtc_startup.curl.sh"
     ```
 
-=== "PowerShell"
-    ```powershell
-    --8<-- "snippets/trtc_startup.ps1"
-    ```
-
 === "Java"
     ```java
     --8<-- "snippets/trtc_startup.java"
+    ```
+
+=== "JavaScript(Browser)"
+    ```js
+    --8<-- "snippets/trtc_startup.browser.js"
     ```
 
 === "JavaScript(Node.js)"
@@ -226,14 +226,14 @@ Content-Type: application/json
     --8<-- "snippets/trtc_startup.node.js"
     ```
 
-=== "JavaScript(Browser.js)"
-    ```js
-    --8<-- "snippets/trtc_startup.browser.js"
+=== "PHP"
+    ``` php
+    --8<-- "snippets/trtc_startup.php"
     ```
 
-=== "PHP"
-    ```php
-    --8<-- "snippets/trtc_startup.php"
+=== "PowerShell"
+    ```powershell
+    --8<-- "snippets/trtc_startup.ps1"
     ```
 
 === "Python"
