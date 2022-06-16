@@ -34,7 +34,7 @@ jobs:
 
       - name: serverless deploy
         run: |
-          echo "SERVERLESS_PLATFORM_VENDOR=tencent" >> .env
+          echo "SERVERLESS_PLATFORM_VENDOR=tencent" > .env
           echo "TENCENT_SECRET_ID=${{ secrets.TENCENT_SECRET_ID }}" >> .env
           echo "TENCENT_SECRET_KEY=${{ secrets.TENCENT_SECRET_KEY }}" >> .env
-          npx serverless deploy
+          npm run deploy:serverless
