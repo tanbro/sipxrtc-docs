@@ -26,13 +26,11 @@
 
 ## 支持的 RTC 云服务
 
-<!-- markdownlint-disable line-length no-empty-links -->
 |                         实时音视频系统                          |        支持情况         |
 | --------------------------------------------------------------- | ----------------------- |
 | [阿里云音视频通信 RTC](https://www.aliyun.com/product/rtc)      | :construction: 开发中   |
 | [腾讯云实时音视频 TRTC](https://cloud.tencent.com/product/trtc) | :white_check_mark: 支持 |
 | [声网](https://www.agora.io/)                                   | :calendar: 规划中       |
-<!-- markdownlint-enable -->
 
 ## 技术特点
 

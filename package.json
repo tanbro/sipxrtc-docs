@@ -4,7 +4,7 @@
   "description": "SIPx 的文档站。",
   "scripts": {
     "build": "dotenv -- bash -c '[ -z \"$MKDOCS\" ] && MKDOCS=mkdocs; $MKDOCS build'",
-    "serve": "dotenv -- bash -c '[ -z \"$MKDOCS\" ] && MKDOCS=mkdocs; $MKDOCS serve -a localhost:8080'",
+    "develop": "dotenv -- bash -c '[ -z \"$MKDOCS\" ] && MKDOCS=mkdocs; $MKDOCS serve -a localhost:8080'",
     "build:serverless": "dotenv -- bash -c '[ -z \"$MKDOCS\" ] && MKDOCS=mkdocs; rm -fr out/cos && mkdir -p out/cos && $MKDOCS build -d out/cos/docs'",
     "deploy:serverless": "SERVERLESS_PLATFORM_VENDOR=tencent serverless deploy"
   },

@@ -3,6 +3,7 @@ curl --request POST \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "trtcParams": {
+        "sdkAppId": 8888888,
         "userId": "telephone",
         "userSig": "xxxxxxxx",
         "roomId": 8888

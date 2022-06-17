@@ -3,5 +3,9 @@
     "ul-indent": {
         "indent": 4
     },
-    "line-length": false
+    "line-length": {
+        "code_blocks": false,
+        "tables": false,
+        "line_length": 160
+    }
 }

@@ -3,6 +3,7 @@ $headers.Add("Content-Type", "application/json")
 
 $body = "{`
     `"trtcParams`": {`
+        `"sdkAppId`": 8888888,
         `"userId`": `"telephone`",`
         `"userSig`": `"xxxxxxxx`",`
         `"roomId`": 8888`
