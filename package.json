@@ -1,11 +1,11 @@
 {
   "name": "sipxdocs",
   "version": "1.0.0",
-  "description": "SIPx 的文档站。",
+  "description": "SIPx 开发说明",
   "scripts": {
     "build": "dotenv -- bash -c '[ -z \"$MKDOCS\" ] && MKDOCS=mkdocs; $MKDOCS build'",
     "develop": "dotenv -- bash -c '[ -z \"$MKDOCS\" ] && MKDOCS=mkdocs; $MKDOCS serve -a localhost:8080'",
-    "build:serverless": "dotenv -- bash -c '[ -z \"$MKDOCS\" ] && MKDOCS=mkdocs; rm -fr out/cos && mkdir -p out/cos && $MKDOCS build -d out/cos/docs'",
+    "build:serverless": "dotenv -- bash -c '[ -z \"$MKDOCS\" ] && MKDOCS=mkdocs; rm -fr serverless-dist/* && mkdir -p serverless-dist/docs && $MKDOCS build -d serverless-dist/docs/develop-guide'",
     "deploy:serverless": "SERVERLESS_PLATFORM_VENDOR=tencent serverless deploy"
   },
   "repository": {

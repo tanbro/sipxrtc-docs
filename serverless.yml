@@ -8,7 +8,7 @@ name: sipx-docs # (必填) 该 website 组件创建的实例名称
 inputs:
   src:
     src: .
-    dist: out/cos
+    dist: serverless-dist
     hook: npm run build:serverless
   region: ap-guangzhou
   bucket: sipx-site-1310945165
