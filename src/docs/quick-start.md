@@ -130,7 +130,7 @@
 
 ## API 签名
 
-[签名算法](signature.md) 这一章详细说明了如何对 [SIPx][] WebAPI 进行签名。
+[签名算法](api/signature.md) 这一章详细说明了如何对 [SIPx][] WebAPI 进行签名。
 
 在按照此章节的说明生成签名之后，我们使用以下变量表示得到的签名数据:
 
@@ -231,7 +231,7 @@ Content-Type: application/json
 如果要查看呼叫的状态，需要使用其它接口，本文的后续部分将会做出说明。
 
 !!! tips
-    访问 <https://static.sipx.cn/openapi/v2205/swagger-ui/>{target=_blank} 查看详细的 OpenAPI 定义
+    访问 <http://docs.sipx.cn/openapi/v2205/swagger-ui>{target=_blank} 查看详细的 OpenAPI 定义
 
 !!! attention
     实际调测时，请将上面的例子中的 ID、签名、用户名等数据替换成真实的值。

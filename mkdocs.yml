@@ -15,14 +15,16 @@ nav:
 
   - docs/quick-start.md
 
-  - API 使用:
-      - docs/signature.md
+  - API 说明:
+      - docs/api/index.md
+
+      - docs/api/signature.md
 
       - 腾讯云实时音视频 TRTC:
-          - docs/trtc/index.md
+          - docs/api/trtc/index.md
 
       - 阿里云音视频通信 RTC:
-          - docs/aliyunrtc/index.md
+          - docs/api/aliyunrtc/index.md
 
 extra:
   generator: false
@@ -31,17 +33,17 @@ theme:
   name: material
   language: zh
   font:
-    false
+    # false
     # text: Noto Sans Simplified Chinese
-    # code: Noto Sans Mono
+    code: Fira Code
   favicon: images/favicon.ico
   logo: images/logo.png
 
   features:
     - header.autohide
-    # - navigation.instant
+    - navigation.instant
     - navigation.sections
-    # - navigation.expand
+    - navigation.expand
     # - navigation.tabs
     - navigation.indexes
     - navigation.top
