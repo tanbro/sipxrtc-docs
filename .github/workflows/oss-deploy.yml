@@ -29,6 +29,7 @@ jobs:
         run: |
           wget https://gosspublic.alicdn.com/ossutil/1.7.13/ossutil64
           chmod 755 ossutil64
+          ./ossutil64 config -e {{ secrtes.ALIYUN_OSS_ENDPOINT }} -i {{ secrets.ALIYUN_API_KEY_ID }} -k {{ secrets.ALIYUN_API_KEY_SECRET }}
 
       - name: Build mkdocs
         run: |
@@ -36,9 +37,4 @@ jobs:
         
       - name: Upload to ALIYUN OSS
         run: |
-          ./ossutil64 cp \
-            $([ -n \"$ALIYUN_OSS_ENDPOINT\" ] && echo \"-e $ALIYUN_OSS_ENDPOINT\") \
-            $([ -n \"$ALIYUN_API_KEY_ID\" ] && echo \"-i $ALIYUN_API_KEY_ID\") \
-            $([ -n \"$ALIYUN_API_KEY_SECRET\" ] && echo \"-k $ALIYUN_API_KEY_SECRET\") \
-            -fr \
-            site oss://$ALIYUN_OSS_BUCKET/docs/develop-guide
+          ./ossutil64 cp -fr site oss://$ALIYUN_OSS_BUCKET/docs/develop-guide
