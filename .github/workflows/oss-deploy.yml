@@ -36,7 +36,7 @@ jobs:
         
       - name: Upload to ALIYUN OSS
         run: |
-          ossutil cp \
+          ./ossutil64 cp \
             $([ -n \"$ALIYUN_OSS_ENDPOINT\" ] && echo \"-e $ALIYUN_OSS_ENDPOINT\") \
             $([ -n \"$ALIYUN_API_KEY_ID\" ] && echo \"-i $ALIYUN_API_KEY_ID\") \
             $([ -n \"$ALIYUN_API_KEY_SECRET\" ] && echo \"-k $ALIYUN_API_KEY_SECRET\") \
