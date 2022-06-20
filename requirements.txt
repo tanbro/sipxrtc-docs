@@ -4,4 +4,4 @@ mkdocs-localsearch
 pygments
 pymdown-extensions
 plantuml-markdown
-mkdocs-with-pdf
+# mkdocs-with-pdf
