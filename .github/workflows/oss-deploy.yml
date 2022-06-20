@@ -32,9 +32,9 @@ jobs:
           ./ossutil64 --version
           echo "
           [Credentials]
-          endpoint = {{ secrets.ALIYUN_OSS_ENDPOINT }}
-          accessKeyID = {{ secrets.ALIYUN_API_KEY_ID }}
-          accessKeySecret = {{ secrets.ALIYUN_API_KEY_SECRET }}
+          endpoint = ${{ secrets.ALIYUN_OSS_ENDPOINT }}
+          accessKeyID = ${{ secrets.ALIYUN_API_KEY_ID }}
+          accessKeySecret = ${{ secrets.ALIYUN_API_KEY_SECRET }}
           " | tee ~/.ossutilconfig
 
       - name: Build mkdocs
@@ -43,4 +43,4 @@ jobs:
         
       - name: Upload to ALIYUN OSS
         run: |
-          ./ossutil64 cp -fr site oss://{{ secrets.ALIYUN_OSS_BUCKET }}/docs/develop-guide
+          ./ossutil64 cp -fr site oss://${{ secrets.ALIYUN_OSS_BUCKET }}/docs/develop-guide
