@@ -6,7 +6,8 @@
     "build": "dotenv -- bash -c '[ -z \"$MKDOCS\" ] && MKDOCS=mkdocs; $MKDOCS build'",
     "develop": "dotenv -- bash -c '[ -z \"$MKDOCS\" ] && MKDOCS=mkdocs; $MKDOCS serve -a localhost:8080'",
     "build:serverless": "dotenv -- bash -c '[ -z \"$MKDOCS\" ] && MKDOCS=mkdocs; rm -fr serverless-dist/* && mkdir -p serverless-dist/docs && $MKDOCS build -d serverless-dist/docs/develop-guide'",
-    "deploy:serverless": "SERVERLESS_PLATFORM_VENDOR=tencent serverless deploy"
+    "deploy:serverless": "SERVERLESS_PLATFORM_VENDOR=tencent serverless deploy",
+    "deploy:oss": "dotenv -- bash -c 'ossutil cp $([ -n \"$ALIYUN_OSS_ENDPOINT\" ] && echo \"-e $ALIYUN_OSS_ENDPOINT\") $([ -n \"$ALIYUN_API_KEY_ID\" ] && echo \"-i $ALIYUN_API_KEY_ID\") $([ -n \"$ALIYUN_API_KEY_SECRET\" ] && echo \"-k $ALIYUN_API_KEY_SECRET\") -fr site oss://$ALIYUN_OSS_BUCKET/docs/develop-guide'"
   },
   "repository": {
     "type": "git",

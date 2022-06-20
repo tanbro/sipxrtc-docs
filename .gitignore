@@ -908,3 +908,4 @@ replay_pid*
 
 # serverless build for COS
 /serverless-dist/
+ossutil_output/
