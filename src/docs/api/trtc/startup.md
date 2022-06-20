@@ -51,7 +51,7 @@ JSON 数据结构[^1]：
 
 | :material-variable: 属性 | :material-alpha-t-box: 数据类型 | :material-null: 默认值 | :material-note-text-outline: 说明 |
 | ------------------------ | ------------------------------- | ---------------------- | --------------------------------- |
-| `id`❗           | `string`                        |                        | 呼叫 ID                  |
+| `id`❗                    | `string`                        |                        | 呼叫 ID                           |
 
 样例:
 
