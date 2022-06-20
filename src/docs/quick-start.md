@@ -231,7 +231,7 @@ Content-Type: application/json
 如果要查看呼叫的状态，需要使用其它接口，本文的后续部分将会做出说明。
 
 !!! tips
-    访问 <http://site.sipx.cn/docs/openapi/v2205/swagger-ui>{target=_blank} 查看详细的 OpenAPI 定义
+    访问 <https://sipx.cn/docs/openapi/v2205/swagger-ui>{target=_blank} 查看详细的 OpenAPI 定义
 
 !!! attention
     实际调测时，请将上面的例子中的 ID、签名、用户名等数据替换成真实的值。
