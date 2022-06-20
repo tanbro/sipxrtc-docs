@@ -23,8 +23,8 @@ https://api.sipx.cn/v2205/boo/foo/baz
 
     WebAPI 的 Path 路径。[SIPx][] 为每个功能接口定义了不同的路径。
 
-`v2205` 的 OpenAPI 定义文件访问地址是: <https://static.sipx.cn/docs/openapi/v2205/openapi.json>{target=_blank}。
+`v2205` 的 OpenAPI 定义文件访问地址是: <https://site.sipx.cn/docs/openapi/v2205/openapi.json>{target=_blank}。
 
-我们还提供了该定义文件的 Swagger 图形界面，它的访问地址是: <http://docs.sipx.cn/openapi/v2205/swagger-ui>{target=_blank}。
+我们还提供了该定义文件的 Swagger 图形界面，它的访问地址是: <http://site.sipx.cn/docs/openapi/v2205/swagger-ui>{target=_blank}。
 
 直接阅读 OpenAPI 定义可以了解到开发说明中缺少的细节。
