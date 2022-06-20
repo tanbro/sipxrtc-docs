@@ -43,4 +43,4 @@ jobs:
         
       - name: Upload to ALIYUN OSS
         run: |
-          ./ossutil64 cp -fr site oss://{{ secrets.ALIYUN_OSS_BUCKET}}/docs/develop-guide
+          ./ossutil64 cp -fr site oss://{{ secrets.ALIYUN_OSS_BUCKET }}/docs/develop-guide
