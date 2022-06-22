@@ -242,6 +242,8 @@ Content-Type: application/json
 
 <!-- markdownlint-disable no-space-in-code -->
 === "cURL"
+    > 此例执行环境为 `Bash`
+
     ```bash
     --8<-- "snippets/trtc_startup.curl.sh"
     ```

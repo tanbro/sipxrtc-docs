@@ -31,7 +31,7 @@ nav:
           - docs/api/aliyunrtc/index.md
 
   - 演示程序:
-    - docs/demo/index.md
+      - docs/demo/index.md
 
 extra:
   generator: false
@@ -41,7 +41,7 @@ theme:
   language: zh
   font:
     # false
-    text: Noto Sans Simplified Chinese
+    # text: Noto Sans Simplified Chinese
     code: Fira Code
   favicon: images/favicon.ico
   logo: images/logo.png
