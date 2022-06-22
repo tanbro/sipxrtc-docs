@@ -30,6 +30,9 @@ nav:
       - 阿里云音视频通信 RTC:
           - docs/api/aliyunrtc/index.md
 
+  - 演示程序:
+    - docs/demo/index.md
+
 extra:
   generator: false
 
