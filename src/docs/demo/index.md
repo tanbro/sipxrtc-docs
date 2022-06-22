@@ -9,7 +9,7 @@
 | 腾讯官方Demo | :material-github: <https://github.com/LiteAVSDK/TRTC_Web/tree/main/base-js>{ target=_blank } |
 | 我们的Demo   | :material-github: <https://github.com/xinmeigz/sipxrtc-demo-trtc-web>{ target=_blank }       |
 
-通过这个 WebApp Demo 进入 [TRTC][] 房间后，[SIPx][] 后台发起 [SIP][] 电话呼叫，将被叫手机拉入房间，进行语音对话。
+通过这个 WebApp Demo 进入 TRTC 房间后，[SIPx][] 后台发起 [SIP][] 电话呼叫，将被叫手机拉入房间，进行语音对话。
 
 我们已经在互联网上部署了这个 Demo，大家可以直接使用、进行体验。
 
